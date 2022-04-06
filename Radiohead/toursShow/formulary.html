@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulary</title>
+  <link rel="stylesheet" href="./styleformulary.css">
+</head>
+<body>
+
+  <header class="containerLogo">
+    <div>
+      <a href="../home/index.html"> <img src="../files/Radiohead.png" alt="Logo Radiohead " id="logoHead"></a>
+    </div>
+  </header>
+
+  <section class="containerFacebook">
+    <h1>PROVIDE YOUR DETAILS</h1>
+    <a href="https://www.facebook.com/">Continue with Facebook</a>
+  </section>
+
+  <hr>
+
+  <form action="#" method="post" enctype="application/x-www-form-urlencoded">
+    <section class="containerFormulary">
+      <fieldset>
+        <legend>Data</legend>
+
+        <div>
+          <label for="text">First Name</label>
+          <input id="text" type="text" name="text">
+        </div>
+
+        <div>
+          <label for="formularyDataLastname">Last Name</label>
+          <input id="text" type="text" name="formularyDataLastname">
+        </div>
+
+        <div>
+          <label for="emailAddress">Email Address</label>
+          <input type="email" name="emailAddress">
+        </div>
+
+        <div>
+          <label for="confirmEmailAddress">Confirm Email Address</label>
+          <input type="email" name="confirmEmailAddress">
+        </div>
+
+        <div>
+          <label for="phone">Phone</label>
+          <input type="tel" name="phone">
+        </div>
+      </fieldset>
+    </section>
+
+    <div class="containerArea">
+      <img src="../files/RAF-Centenary-Concert-Seating-Areas copia.png" alt="" width="500">
+      <label for="zone">Zone</label>
+
+      <select name="zone">
+        <option value="" hidden>Chose option </option>
+        <option value="p">Premium front nave</option>
+        <option value="c">Central nave</option>
+        <option value="r">Rear nave</option>
+        <option value="ssl">Side stage left</option>
+        <option value="ssr">Side stage right</option>
+        <option value="sal">Side aisle left</option>
+        <option value="ssl">Side aisle right</option>
+      </select>
+    </div>
+
+    <div class="containerTermsOfService">
+      <label for="acepta">I agree to the <a href="../tyspp/termsofservice.html">Term of Service and PrivacyPolicy</a></label>
+      <input id="acepta" type="checkbox" name="acepta" value="1" />
+    </div>
+
+    <div class="containerButton">
+     <input type="reset" value="Clean Formulary" />
+     <input type="submit" value="Continue" />
+    </div>
+  </form>
+
+  <footer class="containerMenu">
+    <div class="divMenu">
+      <a href="../customerServices/costumerservices.html" class="menu" id="costumerServices">Customer Services</a>
+      <a href="../toursShow/tys.html" class="menu">Tours & Shows</a>
+      <a href="../shop/shop.html" class="menu">Shop</a>
+      <a href="../photoGallery/galery.html" class="menu">Photo gallery</a>
+    </div>
+  </footer>
+
+</body>
+</html>

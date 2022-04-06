@@ -1,0 +1,154 @@
+body {
+  margin: 0px;
+  background-color: rgb(253, 247, 247);
+}
+
+#logoHead {
+  height: 90px;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  border: 0px;
+  z-index: 1;
+}
+
+#videoHead {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+}
+
+.containerArrow {
+  position: relative;
+}
+
+#arrow {
+  display: inline-block;
+  height: 30px;
+  position: absolute;
+
+  bottom: 150px;
+  left: 50%;
+  filter: drop-shadow(2px 2px 0.75px black);
+  z-index: 2;
+}
+
+.containerLinks {
+  min-height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex: 1;
+  justify-content: center;
+
+  margin-top: 25px;
+  margin-bottom: 25px;
+  background-color: rgb(251, 247, 246);
+}
+
+.logos {
+  display: flex;
+  width: 1240px;
+  justify-content: space-around;
+}
+
+.link {
+  width: auto;
+}
+
+.imgEpic,
+.imgPs {
+  height: 110px;
+}
+
+.containerMenu {
+  min-height: 100%;
+  min-width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex: 1;
+  justify-content: center;
+  background-color: rgb(229 48 19);
+}
+
+.divMenu {
+  display: flex;
+  min-width: 100%;
+  justify-content: space-around;
+}
+
+.menu {
+  font-family: "League Spartan", sans-serif;
+  color: rgb(253, 247, 247);
+  font-size: 19px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-decoration: none;
+  word-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+
+  padding: 12px 18px 9px 18px;
+
+  border-radius: 25px;
+  border-width: 2px;
+  border-color: rgb(253, 247, 247);
+  border-style: solid;
+
+  width: 200px;
+  margin-top: 33px;
+  margin-bottom: 110px;
+}
+.containerMenu a:hover {
+  background-color: rgb(46, 46, 46);
+}
+
+
+@media screen and (max-width: 1200px) {
+  #logoHead {
+    height: 76.5px;
+  }
+  #arrow {
+    height: 25.5px;
+    bottom: 110px;
+  }
+
+  .imgEpic,
+  .imgPs {
+    height: 93.5px;
+  }
+  .menu {
+    width: 170px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+    #logoHead {
+      height: 62.62px;
+    }
+
+    #arrow {
+      height: 20.87px;
+      bottom: 95px;
+    }
+
+  .imgEpic,
+  .imgPs {
+    height: 77.3px;
+  }
+  .divMenu {
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  
+  .menu {
+    width: 300px;
+    margin-bottom: 50px
+  }
+}

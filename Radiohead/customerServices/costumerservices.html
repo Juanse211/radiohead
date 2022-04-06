@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Services</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <header class="containerLogo">
+    <div>
+      <a href="../home/index.html"> <img src="../files/Radiohead.png" alt="Logo Radiohead " id="logoHead"></a>
+    </div>
+  </header>
+
+  <section class="containerText">
+    <h1>CUSTOMER SERVICES</h1>
+    <p>When contacting us regarding an existing order, please provide as much information as you can about you and your
+      order
+      to enable us to respond quickly and effectively to your query. 
+      <br><br>
+      For your protection, please do not provide credit card numbers, passwords, bank account numbers or other non-public
+      information when contacting us. Public internet email is a communication channel which cannot be guaranteed to be
+      secure, therefore there are no guarantees that any email or its contents have not been intercepted by a third party or
+      have been altered after being sent. We commit to ensuring the privacy of your information.</p>
+  </section>
+
+  <hr>
+
+  <form action="#" method="post" enctype="application/x-www-form-urlencoded">
+    <section class="containerFormulary">
+      <fieldset>
+        <legend>Data</legend>
+  
+        <div>
+          <label for="text">First Name</label>
+          <input id="text" type="text" name="text">
+        </div>
+  
+        <div>
+          <label for="formularyDataLastname">Last Name</label>
+          <input id="text" type="text" name="formularyDataLastname">
+        </div>
+  
+        <div>
+          <label for="emailAddress">Email Address</label>
+          <input type="email" name="emailAddress">
+        </div>
+  
+        <div>
+          <label for="confirmEmailAddress">Confirm Email Address</label>
+          <input type="email" name="confirmEmailAddress">
+        </div>
+  
+        <div>
+          <label for="phone">Phone</label>
+          <input type="tel" name="phone">
+        </div>
+      </fieldset>
+    </section>
+  
+    <div class="containerTermsOfService">
+      <label for="acepta">I agree to the <a href="../tyspp/termsofservice.html">Term of Service and
+          PrivacyPolicy</a></label>
+      <input id="acepta" type="checkbox" name="acepta" value="1" />
+    </div>
+  
+    <div class="containerButton">
+      <input type="reset" value="Clean Formulary" />
+      <input type="submit" value="Continue" />
+    </div>
+  </form>
+</body>
+</html>

@@ -1,0 +1,159 @@
+body {
+  font-family: "League Spartan", sans-serif;
+  margin: 0px;
+}
+
+#logoHead {
+  position: absolute;
+  height: 90px;
+  left: 15px;
+  top: 15px;
+  border: 0px;
+  z-index: 2;
+}
+
+.background {
+  position: fixed;
+  top: 0%;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -2;
+}
+
+.containerText {
+  text-align: center;
+  margin-top: 6vh;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin-top: 10vh;
+  margin-bottom: 8vh;
+}
+
+.date {
+  position: flex;
+  justify-content: center;
+  width: max-content;
+  border-style: solid;
+  border-width: 1px;
+  padding: 12px;
+  background-color: rgb(253 247 247);
+  margin-left: 12.5%;
+}
+.containerBox {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-items: center;
+  width: 75%;
+  margin-left: 12.5%;
+  margin-bottom: 1vh;
+}
+.containerRectangle {
+  display: flex;
+  flex-direction: row;
+  width: 96.8%;
+  border-style: solid;
+  border-width: 1px;
+  padding: 1.5vh;
+  background-color: rgb(253 247 247);
+  font-size: 17px;
+
+}
+.fact1 {
+  width: 15%;
+  text-align: left;
+
+}
+
+.fact2,
+.fact3,
+.fact4 {
+  width: 23.33333333333333%;
+  text-align: left;
+}
+.fact5 {
+  width: 15%;
+  text-align: end;
+}
+.containerMenu {
+  min-height: 100%;
+  min-width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex: 1;
+  justify-content: center;
+}
+.divMenu {
+  display: flex;
+  min-width: 100%;
+  justify-content: space-around;
+}
+.menu {
+  font-family: "League Spartan", sans-serif;
+  color: rgb(253, 247, 247);
+  font-size: 19px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-decoration: none;
+  word-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+
+  padding: 12px 18px 9px 18px;
+
+  border-radius: 25px;
+  border-width: 2px;
+  border-color: rgb(253, 247, 247);
+  border-style: solid;
+
+  width: 200px;
+  margin-top: 33px;
+  margin-bottom: 100px;
+}
+.containerMenu a:hover {
+  background-color: rgb(46, 46, 46);
+}
+
+
+@media screen and (max-width: 1200px) {
+  #logoHead {
+    height: 76.5px;
+  }
+
+  .containerText {
+    font-size: 14px;
+  }
+
+  .containerBox {
+    width: 75%;
+  }
+
+  .menu {
+    width: 170px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #logoHead {
+    height: 62.62px;
+  }
+
+  .divMenu {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .menu {
+    width: 300px;
+    margin-bottom: 50px
+  }
+  
+}
