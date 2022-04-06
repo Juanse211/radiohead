@@ -91,6 +91,7 @@ body {
   word-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
+  transition: background-color 0.5s;
 
   padding: 12px 18px 9px 18px;
 
@@ -106,7 +107,6 @@ body {
 .containerMenu a:hover {
   background-color: rgb(46, 46, 46);
 }
-
 
 @media screen and (max-width: 1200px) {
   #logoHead {
@@ -128,14 +128,14 @@ body {
 }
 
 @media screen and (max-width: 992px) {
-    #logoHead {
-      height: 62.62px;
-    }
+  #logoHead {
+    height: 62.62px;
+  }
 
-    #arrow {
-      height: 20.87px;
-      bottom: 95px;
-    }
+  #arrow {
+    height: 20.87px;
+    bottom: 95px;
+  }
 
   .imgEpic,
   .imgPs {
@@ -144,11 +144,10 @@ body {
   .divMenu {
     flex-direction: column;
     align-items: center;
-    
   }
-  
+
   .menu {
     width: 300px;
-    margin-bottom: 50px
+    margin-bottom: 50px;
   }
 }
