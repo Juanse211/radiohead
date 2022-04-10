@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
   <header class="containerLogo">
     <div>
@@ -15,62 +17,90 @@
     </div>
   </header>
 
-  <section class="containerText">
-    <h1>CUSTOMER SERVICES</h1>
-    <p>When contacting us regarding an existing order, please provide as much information as you can about you and your
-      order
-      to enable us to respond quickly and effectively to your query. 
-      <br><br>
-      For your protection, please do not provide credit card numbers, passwords, bank account numbers or other non-public
-      information when contacting us. Public internet email is a communication channel which cannot be guaranteed to be
-      secure, therefore there are no guarantees that any email or its contents have not been intercepted by a third party or
-      have been altered after being sent. We commit to ensuring the privacy of your information.</p>
+  <section class="container mt-5 ">
+    <div class="col-12">
+      <h1>CUSTOMER SERVICES</h1>
+      <p>
+        When contacting us regarding an existing order, please provide as much information as you can about you and your
+        order
+        to enable us to respond quickly and effectively to your query.
+        <br><br>
+        For your protection, please do not provide credit card numbers, passwords, bank account numbers or other non-public
+        information when contacting us. Public internet email is a communication channel which cannot be guaranteed to be
+        secure, therefore there are no guarantees that any email or its contents have not been intercepted by a third party or
+        have been altered after being sent. We commit to ensuring the privacy of your information.
+      </p>
+    </div>
+      
+  </section>
+  
+  <section class="container-xl mt-5">
+    <form class="row g-3">
+      <div class="col-md-6">
+        <label for="firstName" class="form-label">First Name</label>
+        <input type="text" class="form-control" id="firstName" required>
+      </div>
+    
+      <div class="col-md-6">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="lastName" required>
+      </div>
+
+      <div class="col-md-8">
+        <label for="emailInfo" class="form-label">E-mail</label>
+        <input type="email" class="form-control" id="emailInfo" required> 
+      </div>
+
+      <div class="col-md-4">
+        <label for="phoneNumber" class="form-label">Phone Number</label>
+        <input type="text" class="form-control" id="phoneNumber">
+      </div>
+
+      <div class="col-md-6">
+        <label for="customerReference" class="form-label">Customer reference</label>
+        <input type="text" class="form-control" id="customerReference" placeholder="Shown on all our confirmation emails">
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label" for="exampleFormControlSelect1">Example select</label>
+        <select class="form-control" id="exampleFormControlSelect1" placeholder="Select">
+            <option>General query</option>
+            <option>I haven't received my tickets</option>
+            <option>I've lost my tickets</option>
+        </select>
+      </div>
+
+      <div class="col-md-6">
+        <label for="coments" class="dorm-label">Your Message</label>
+        <textarea class="form-control" id="comments" rows="3"></textarea>
+      </div>
+
+      <div class="col-md-6">
+        <label for="eventDetails" class="form-label">Event Details</label>
+        <input type="text" class="form-control" id="eventDetails" placeholder="Ej. Venue, Date">
+      </div>
+
+      <div class="col-md-10">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck">
+          <label class="form-check-label" for="gridCheck">I agree to the <a href="../tyspp/termsofservice.html">Term of Service and Privacy Policy</a></label>
+        </div>
+      </div>
+
+      <div class="col-md-2 d-flex justify-content-end"> 
+        <button type="submit" class="btn btn-primary">Sign in</button>
+      </div>
+    </form>
   </section>
 
-  <hr>
+<footer class="container-fluid mt-5">
+  <div class="row g-3  ">
+      <a class="btn btn-outline-danger" href="../toursShow/tys.html" role="button">Tours & Shows</a>
+      <a class="btn btn-outline-danger" href="../shop/shop.html" role="button">Shop</a>
+      <a class="btn btn-outline-danger" href="../photoGallery/galery.html" role="button">Photo gallery</a>
+    </div>
+  </div>
+</footer>
 
-  <form action="#" method="post" enctype="application/x-www-form-urlencoded">
-    <section class="containerFormulary">
-      <fieldset>
-        <legend>Data</legend>
-  
-        <div>
-          <label for="text">First Name</label>
-          <input id="text" type="text" name="text">
-        </div>
-  
-        <div>
-          <label for="formularyDataLastname">Last Name</label>
-          <input id="text" type="text" name="formularyDataLastname">
-        </div>
-  
-        <div>
-          <label for="emailAddress">Email Address</label>
-          <input type="email" name="emailAddress">
-        </div>
-  
-        <div>
-          <label for="confirmEmailAddress">Confirm Email Address</label>
-          <input type="email" name="confirmEmailAddress">
-        </div>
-  
-        <div>
-          <label for="phone">Phone</label>
-          <input type="tel" name="phone">
-        </div>
-      </fieldset>
-    </section>
-  
-    <div class="containerTermsOfService">
-      <label for="acepta">I agree to the <a href="../tyspp/termsofservice.html">Term of Service and
-          PrivacyPolicy</a></label>
-      <input id="acepta" type="checkbox" name="acepta" value="1" />
-    </div>
-  
-    <div class="containerButton">
-      <input type="reset" value="Clean Formulary" />
-      <input type="submit" value="Continue" />
-    </div>
-  </form>
 </body>
 </html>
