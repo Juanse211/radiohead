@@ -65,46 +65,40 @@ body {
 }
 
 .containerMenu {
-  min-height: 100%;
-  min-width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  flex: 1;
-  justify-content: center;
   background-color: rgb(229 48 19);
 }
 
 .divMenu {
   display: flex;
-  min-width: 100%;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .menu {
+  background-color: rgba(rgba(255, 255, 255, 0));
+  display: flex;
+  justify-content: center;
   font-family: "League Spartan", sans-serif;
   color: rgb(253, 247, 247);
-  font-size: 19px;
+  font-size: 1.8vh;
   font-weight: bold;
-  letter-spacing: 1px;
+
   text-decoration: none;
   word-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
-  transition: background-color 0.5s;
 
-  padding: 12px 18px 9px 18px;
-
-  border-radius: 25px;
-  border-width: 2px;
+  border-radius: 1.5vh;
+  border-width: 0.3vh;
   border-color: rgb(253, 247, 247);
   border-style: solid;
 
-  width: 200px;
-  margin-top: 33px;
-  margin-bottom: 110px;
+  width: 23vh;
+
+  transition: background-color 0.5s;
 }
+
 .containerMenu a:hover {
+  color: rgb(253, 247, 247);
   background-color: rgb(46, 46, 46);
 }
 
@@ -112,18 +106,10 @@ body {
   #logoHead {
     height: 76.5px;
   }
+  
   #arrow {
     height: 25.5px;
     bottom: 110px;
-  }
-
-  .imgEpic,
-  .imgPs {
-    height: 93.5px;
-  }
-  .menu {
-    width: 170px;
-    font-size: 16px;
   }
 }
 
@@ -140,14 +126,5 @@ body {
   .imgEpic,
   .imgPs {
     height: 77.3px;
-  }
-  .divMenu {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .menu {
-    width: 300px;
-    margin-bottom: 50px;
   }
 }

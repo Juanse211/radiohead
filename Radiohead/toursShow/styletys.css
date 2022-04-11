@@ -45,6 +45,7 @@ h2 {
   background-color: rgb(253 247 247);
   margin-left: 12.5%;
 }
+
 .containerBox {
   display: flex;
   flex-wrap: nowrap;
@@ -54,6 +55,7 @@ h2 {
   margin-left: 12.5%;
   margin-bottom: 1vh;
 }
+
 .containerRectangle {
   display: flex;
   flex-direction: row;
@@ -64,6 +66,7 @@ h2 {
   background-color: rgb(253 247 247);
   font-size: 17px;
 }
+
 .fact1 {
   width: 15%;
   text-align: left;
@@ -75,48 +78,43 @@ h2 {
   width: 23.33333333333333%;
   text-align: left;
 }
+
 .fact5 {
   width: 15%;
   text-align: end;
 }
-.containerMenu {
-  min-height: 100%;
-  min-width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  flex: 1;
-  justify-content: center;
-}
+
 .divMenu {
   display: flex;
-  min-width: 100%;
-  justify-content: space-around;
+  justify-content: center;
 }
+
 .menu {
+  background-color: rgba(rgba(255, 255, 255, 0));
+  display: flex;
+  justify-content: center;
   font-family: "League Spartan", sans-serif;
   color: rgb(253, 247, 247);
-  font-size: 19px;
+  font-size: 1.8vh;
   font-weight: bold;
-  letter-spacing: 1px;
+
   text-decoration: none;
   word-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
-  transition: background-color 0.5s;
 
-  padding: 12px 18px 9px 18px;
-
-  border-radius: 25px;
-  border-width: 2px;
+  border-radius: 1.5vh;
+  border-width: 0.3vh;
   border-color: rgb(253, 247, 247);
   border-style: solid;
 
-  width: 200px;
-  margin-top: 33px;
-  margin-bottom: 100px;
+  width: 23vh;
+
+  transition: background-color 0.5s;
 }
+
 .containerMenu a:hover {
+  color: rgb(253, 247, 247);
   background-color: rgb(46, 46, 46);
 }
 
@@ -150,7 +148,6 @@ h2 {
   }
 
   .menu {
-    width: 300px;
     margin-bottom: 50px;
   }
 }
