@@ -1,10 +1,16 @@
 #logo-head {
   height: 90px;
+  position: absolute;
   left: 15px;
   top: 15px;
   border: 0px;
   z-index: 1;
 }
+
+.h1 {
+  text-align: center;
+}
+
 .container-menu {
   background-color: rgb(229 48 19);
 }
@@ -28,7 +34,6 @@
   text-transform: uppercase;
   text-align: center;
 
-  border: 5vh;
   border-radius: 1.5vh;
   border-width: 0.3vh;
   border-color: rgb(253, 247, 247);
@@ -49,8 +54,9 @@
     height: 76.5px;
   }
 }
+
 @media screen and (max-width: 992px) {
-    #logo-head {
-      height: 62.62px;
-    }
+  #logo-head {
+    height: 62.62px;
+  }
 }
