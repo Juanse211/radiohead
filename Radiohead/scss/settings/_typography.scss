@@ -1,0 +1,22 @@
+$font-family: "Open sans", sans-serif;
+
+// Typography scale
+$fs-base: 16;
+
+$-fs-9: 9 / $fs-base + rem;
+$-fs-12: 12 / $fs-base + rem;
+$-fs-14: 14 / $fs-base + rem;
+$-fs-19: 19 / $fs-base + rem;
+$-fs-25: 25 / $fs-base + rem;
+$-fs-33: 33 / $fs-base + rem;
+$-fs-44: 44 / $fs-base + rem;
+
+//Typography applications
+$fs-btn: $-fs-9;
+$fs-footer: $-fs-12;
+$fs-menu: $-fs-14;
+$fs-body: $-fs-14;
+$fs-lead: $-fs-19;
+$fs-title-s: $-fs-25;
+$fs-title-m: $-fs-33;
+$fs-title-l: $-fs-44;
