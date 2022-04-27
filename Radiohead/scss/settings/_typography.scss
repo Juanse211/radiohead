@@ -1,4 +1,4 @@
-$font-family: "Open sans", sans-serif;
+$font-family:"League Spartan", sans-serif;
 
 // Typography scale
 $fs-base: 16;
@@ -20,3 +20,9 @@ $fs-lead: $-fs-19;
 $fs-title-s: $-fs-25;
 $fs-title-m: $-fs-33;
 $fs-title-l: $-fs-44;
+
+//Typography aline
+
+.fs-center{
+  text-align: center;
+}

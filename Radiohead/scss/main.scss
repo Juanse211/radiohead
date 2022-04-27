@@ -1,123 +1,34 @@
-$colorWhite: rgba(253, 247, 247, 1);
-$colorRed: rgba(229, 48, 19, 1);
-$colorBlack: rgba(46, 46, 46, 1);
+// generic
+@import "generic/boxSizing";
+@import "generic/normalize";
 
-//map
-$icon: (img-epic: 110px, img-ps: 110px);
-@each $icon, $height in $icon {
-  .#{$icon} {
-    height: $height;
-  }
-}
+// settings
+@import "settings/colors";
+@import "settings/layout";
+@import "settings/typography";
+@import "settings/variables";
 
-//extend
-.font {
-  font-family: "League Spartan", sans-serif;
-  color: $colorWhite;
-  font-size: 1.8vh;
-  font-weight: bold;
-  
-  text-decoration: none;
-  word-spacing: 1px;
-  text-transform: uppercase;
-  text-align: center;
-}
+// atoms
+@import "atoms/logo-head";
+@import "atoms/logos";
+@import "atoms/arrow";
 
-//mixing
-@mixin flex-center($display, $justify-content) {
-  display: $display;
-  justify-content: $justify-content;
-}
+// molecules
+@import "molecules/tabla";
+@import "molecules/video";
+
+//organisms
+@import "organisms/footer";
+@import "organisms/background";
+
+// tools
+@import "tools/justify";
+@import "tools/sidebar";
+@import "tools/toRem";
 
 body {
-  margin: 0px;
-  background-color: $colorWhite;
-}
-
-#logo-head {
-  height: 90px;
-  position: absolute;
-  left: 15px;
-  top: 15px;
-  border: 0px;
-  z-index: 1;
-}
-
-#video-head {
-  min-width: 100%;
-  max-width: 100%;
-  min-height: 100%;
-  top: 50%;
-  left: 50%;
-  z-index: -1;
-}
-
-.container-arrow {
-  position: relative;
-}
-
-#arrow {
-  display: inline-block;
-  height: 30px;
-  position: absolute;
-
-  bottom: 150px;
-  left: 50%;
-  filter: drop-shadow(2px 2px 0.75px $colorBlack);
-  z-index: 2;
-}
-
-.container-links {
-  @include flex-center(flex, center);
-  min-height: 100%;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  flex: 1;
-
-  margin-top: 25px;
-  margin-bottom: 25px;
-  background-color: $colorWhite;
-}
-
-.logos {
-  display: flex;
-  width: 1240px;
-  justify-content: space-around;
-}
-
-.link {
-  width: auto;
-}
-
-.img-epic,
-.img-ps {
-  height: 110px;
-}
-
-.container-menu {
-  background-color: $colorRed;
-
-  a:hover {
-    color: $colorWhite;
-    background-color: $colorBlack;
-  }
-}
-
-.div-menu {
-  @include flex-center(flex, center);
-}
-
-.menu {
-  @include flex-center(flex, center);
-  @extend .font;
-  border-radius: 1.5vh;
-  border-width: 0.3vh;
-  border-color: $colorWhite;
-  border-style: solid;
-
-  width: 23vh;
-
-  transition: background-color 0.5s;
+  background-color: $primary-light-color;
+  font-family: $font-family;
 }
 
 @media screen and (max-width: 1200px) {
@@ -126,23 +37,31 @@ body {
   }
 
   #arrow {
+    display: none;
     height: 25.5px;
-    bottom: 110px;
   }
 }
 
 @media screen and (max-width: 992px) {
+
   #logo-head {
     height: 62.62px;
   }
 
   #arrow {
     height: 20.87px;
-    bottom: 95px;
   }
 
   .img-epic,
   .img-ps {
     height: 77.3px;
+  }
+  .div-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu {
+    margin-bottom: 50px;
   }
 }

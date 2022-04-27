@@ -1,0 +1,10 @@
+#arrow {
+  display: inline-block;
+  height: 30px;
+  position: relative;
+
+  bottom: 150px;
+  left: 50%;
+  filter: drop-shadow(2px 2px 0.75px black);
+  z-index: 2;
+}

@@ -1,0 +1,44 @@
+.container-menu {
+    margin-top: 2vh;
+    background-color: $primary-color;
+    min-height: 203px;
+      a:hover {
+        color: $primary-light-color;
+        background-color: $primary-dark-color;
+      }
+}
+
+.container-menu-transparent {
+  a:hover {
+    color: $primary-light-color;
+    background-color: $primary-dark-color;
+  }
+}
+
+.div-menu {
+  display: flex;
+  justify-content: center;
+}
+
+.menu {
+  background-color:rgba(255, 255, 255, 0);
+  display: flex;
+  justify-content: center;
+  color:$primary-light-color;
+  font-size: 1.8vh;
+  font-weight: bold;
+  
+  text-decoration: none;
+  word-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  
+  border-radius: 1.5vh;
+  border-width: 0.3vh;
+  border-color: rgb(253, 247, 247);
+  border-style: solid;
+  
+  width: 23vh;
+  
+  transition: background-color 0.5s;
+}
