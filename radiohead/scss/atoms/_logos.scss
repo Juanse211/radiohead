@@ -1,4 +1,4 @@
-@use "../settings/variables" as *;
+@import "../settings/variables";
 
 .container-links {
   min-height: 100%;
@@ -8,8 +8,8 @@
   flex: 1;
   justify-content: center;
 
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin-top: 39.5px;
+  margin-bottom: 64px;
 }
 
 .logos {

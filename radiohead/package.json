@@ -1,17 +1,20 @@
 {
   "name": "radiohead",
   "version": "1.0.0",
-  "description": "fanpage radiohead",
+  "description": "radiohead fan page",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node-sass --include-path scss scss/main.scss css/main.css",
     "watch": "nodemon -e scss -x \"npm run build\""
   },
-  "author": "",
+  "author": "juan albornoz",
   "license": "ISC",
   "dependencies": {
     "node-sass": "^7.0.1",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.16"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
   }
 }

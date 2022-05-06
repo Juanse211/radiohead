@@ -322,7 +322,9 @@ template {
   border: 0px;
   z-index: 1; }
 
-@use "../settings/variables" as *;
+.fs-center {
+  text-align: center; }
+
 .container-links {
   min-height: 100%;
   display: flex;
@@ -330,8 +332,8 @@ template {
   flex-wrap: nowrap;
   flex: 1;
   justify-content: center;
-  margin-top: 25px;
-  margin-bottom: 25px; }
+  margin-top: 39.5px;
+  margin-bottom: 64px; }
 
 .logos {
   display: flex;
@@ -346,15 +348,16 @@ template {
   height: 110px; }
 
 #arrow {
-  display: inline-block;
   height: 30px;
-  position: relative;
-  bottom: 150px;
+  position: absolute;
   left: 50%;
+  bottom: 300px;
   filter: drop-shadow(2px 2px 0.75px black);
   z-index: 2; }
 
-@use "../settings/variables" as *;
+.fs-center {
+  text-align: center; }
+
 .date {
   position: flex;
   justify-content: center;
@@ -404,10 +407,17 @@ template {
   left: 50%;
   z-index: -1; }
 
+#picture-head {
+  display: none;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  z-index: -1; }
+
 .container-menu {
-  margin-top: 2vh;
+  margin-top: 24.5px;
   background-color: #E53013;
-  min-height: 203px; }
+  height: 205px; }
   .container-menu a:hover {
     color: #Fdf7f7;
     background-color: #2e2e2e; }
@@ -451,21 +461,27 @@ body {
 
 @media screen and (max-width: 1200px) {
   #logo-head {
-    height: 76.5px; }
+    height: 90px; }
   #arrow {
-    display: none;
-    height: 25.5px; } }
+    display: none; }
+  .container-menu {
+    height: 253px; } }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 768px) {
   #logo-head {
     height: 62.62px; }
-  #arrow {
-    height: 20.87px; }
+  #video-head {
+    display: none; }
+  #picture-head {
+    display: block; }
   .img-epic,
   .img-ps {
-    height: 77.3px; }
+    height: 80px; }
+  .container-menu {
+    height: 355px; }
   .div-menu {
     flex-direction: column;
     align-items: center; }
   .menu {
-    margin-bottom: 50px; } }
+    margin-bottom: 20px;
+    margin-top: 20px; } }
