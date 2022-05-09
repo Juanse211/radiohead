@@ -1,6 +1,4 @@
-@import "../settings/variables";
-
-.container-links {
+.container-button {
   min-height: 100%;
   display: flex;
   flex-direction: row;
@@ -12,17 +10,12 @@
   margin-bottom: 64px;
 }
 
-.logos {
+.button {
   display: flex;
   width: 1240px;
   justify-content: space-around;
 }
 
-.link {
-  width: auto;
-}
-
-.imgEpic,
-.imgPs {
+.button__body {
   height: 110px;
 }

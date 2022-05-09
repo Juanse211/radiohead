@@ -1,6 +1,4 @@
-@import "../settings/variables";
-
-.date {
+.tabs__date {
   position: flex;
   justify-content: center;
   width: max-content;
@@ -8,41 +6,73 @@
   border-width: 1px;
   padding: 12px;
   background-color: $primary-light-color;
-  margin-left: 12.5%;
+  margin-left: 7.5%;
 } 
 
-.container-box {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: column;
-  justify-items: center;
-  width: 75%;
-  margin-left: 12.5%;
+.tabs {
+  margin: 0 auto;
+  width: 85%;
   margin-bottom: 1vh;
 }
 
-.container-rectangle {
+.tabs__list {
   display: flex;
   flex-direction: row;
-  width: 96.8%;
   border-style: solid;
   border-width: 1px;
   padding: 1.5vh;
   background-color: $primary-light-color;
   font-size: 17px;
+
 }
 
-.fact1 {
-  width: 15%;
-  text-align: left;
+.tabs__item {
+  width: 12%;
+  text-align: start;
 }
 
-.fact2, .fact3, .fact4 {
-  width: 23.33333333333333%;
-  text-align: left;
+
+.tabs__item-2{
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  justify-content: space-between;
+  text-align: start;
 }
 
-.fact5 {
-    width: 15%;
+.tabs__item__item {
+  width: 33%;
+}
+
+.tabs__item-3 {
+    width: 18%;
     text-align: end;
+}
+
+@media screen and (max-width: 768px) {
+  .tabs__date{
+    margin-left: 1.5%;
+  }
+  .tabs{
+    width: 97%;
+  }
+  
+  .tabs__list {
+    flex-direction: column;
+    
+  }
+  .tabs__item{
+    width: 100%;
+  }
+  .tabs__item-2{
+    width: 100%;
+  }
+
+  .tabs__item__item{
+    text-align: center;
+  }
+  .tabs__item-3{
+    width: 100%;
+    text-align: center;
+  }
 }
