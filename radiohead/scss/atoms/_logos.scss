@@ -19,3 +19,9 @@
 .button__body {
   height: 110px;
 }
+
+@media screen and (max-width: 768px) {
+  .button__body{
+    height: 80px;
+  }
+}

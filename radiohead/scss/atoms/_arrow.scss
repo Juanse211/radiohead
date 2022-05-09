@@ -7,3 +7,9 @@
   filter: drop-shadow(2px 2px 0.75px black);
   z-index: 2;
 }
+
+@media screen and (max-width: 1200px) {
+  #arrow {
+    display: none;
+  }
+}

@@ -21,12 +21,13 @@
 .div-menu {
   display: flex;
   justify-content: center;
-  height: 30px;
 }
 
 .menu {
   background-color:rgba(255, 255, 255, 0);
   display: flex;
+  flex-direction: column;
+  text-align: center;
   justify-content: center;
   color:$primary-light-color;
   font-size: 1.8vh;
@@ -42,7 +43,41 @@
   border-color: rgb(253, 247, 247);
   border-style: solid;
   
-  width: 23vh;
+  width: 24vh;
+  height: 3.3vh;
   
   transition: background-color 0.5s;
+}
+
+@media screen and (max-width: 1200px) {
+  #logo-head {
+    height: 90px;
+  }
+
+  #arrow {
+    display: none;
+  }
+
+  .container-menu {
+    height: 253px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container-menu {
+    height: 355px;
+  }
+
+  .div-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 2.3vh;
+    width: 40vh;
+    height: 3.5vh;
+  }
 }

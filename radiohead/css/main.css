@@ -328,6 +328,14 @@ template {
   border: 0px;
   z-index: 1; }
 
+@media screen and (max-width: 1200px) {
+  #logo-head {
+    height: 90px; } }
+
+@media screen and (max-width: 768px) {
+  #logo-head {
+    height: 62.62px; } }
+
 .container-button {
   min-height: 100%;
   display: flex;
@@ -346,6 +354,10 @@ template {
 .button__body {
   height: 110px; }
 
+@media screen and (max-width: 768px) {
+  .button__body {
+    height: 80px; } }
+
 #arrow {
   height: 30px;
   position: absolute;
@@ -353,6 +365,10 @@ template {
   bottom: 300px;
   filter: drop-shadow(2px 2px 0.75px black);
   z-index: 2; }
+
+@media screen and (max-width: 1200px) {
+  #arrow {
+    display: none; } }
 
 .tabs__date {
   position: flex;
@@ -421,12 +437,20 @@ template {
   left: 50%;
   z-index: -1; }
 
+@media screen and (max-width: 768px) {
+  #video-head {
+    display: none; } }
+
 #picture-head {
   display: none;
   min-width: 100%;
   max-width: 100%;
   min-height: 100%;
   z-index: -1; }
+
+@media screen and (max-width: 768px) {
+  #picture-head {
+    display: block; } }
 
 .container-menu {
   margin-top: 24.5px;
@@ -445,12 +469,13 @@ template {
 
 .div-menu {
   display: flex;
-  justify-content: center;
-  height: 30px; }
+  justify-content: center; }
 
 .menu {
   background-color: rgba(255, 255, 255, 0);
   display: flex;
+  flex-direction: column;
+  text-align: center;
   justify-content: center;
   color: #Fdf7f7;
   font-size: 1.8vh;
@@ -462,8 +487,30 @@ template {
   border-width: 0.3vh;
   border-color: #fdf7f7;
   border-style: solid;
-  width: 23vh;
+  width: 24vh;
+  height: 3.3vh;
   transition: background-color 0.5s; }
+
+@media screen and (max-width: 1200px) {
+  #logo-head {
+    height: 90px; }
+  #arrow {
+    display: none; }
+  .container-menu {
+    height: 253px; } }
+
+@media screen and (max-width: 768px) {
+  .container-menu {
+    height: 355px; }
+  .div-menu {
+    flex-direction: column;
+    align-items: center; }
+  .menu {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 2.3vh;
+    width: 40vh;
+    height: 3.5vh; } }
 
 .background {
   position: fixed;
@@ -475,30 +522,3 @@ template {
 body {
   background-color: #Fdf7f7;
   font-family: "League Spartan", sans-serif; }
-
-@media screen and (max-width: 1200px) {
-  #logo-head {
-    height: 90px; }
-  #arrow {
-    display: none; }
-  .container-menu {
-    height: 253px; } }
-
-@media screen and (max-width: 768px) {
-  #logo-head {
-    height: 62.62px; }
-  #video-head {
-    display: none; }
-  #picture-head {
-    display: block; }
-  .img-epic,
-  .img-ps {
-    height: 80px; }
-  .container-menu {
-    height: 355px; }
-  .div-menu {
-    flex-direction: column;
-    align-items: center; }
-  .menu {
-    margin-bottom: 20px;
-    margin-top: 20px; } }
