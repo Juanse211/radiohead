@@ -10,18 +10,18 @@
   margin-bottom: 64px;
 }
 
-.button {
+.button-logo {
   display: flex;
   width: 1240px;
   justify-content: space-around;
 }
 
-.button__body {
+.button-logo__body {
   height: 110px;
 }
 
 @media screen and (max-width: 768px) {
-  .button__body{
+  .button-logo__body{
     height: 80px;
   }
 }
