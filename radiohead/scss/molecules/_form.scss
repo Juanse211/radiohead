@@ -59,7 +59,7 @@
 }
 
 .tof{
-  width: 70%;
+  width: 75%;
   display: flex;
   margin-top: 1rem;
 }
@@ -69,7 +69,8 @@
   margin-top: 0.7vh;
 }
 
-.button {
+.button{
+  display: flex;
   width:20%;
   margin-top: 1rem;
   justify-content: end;
