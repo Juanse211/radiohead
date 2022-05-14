@@ -7,6 +7,7 @@
   padding: 12px;
   background-color: $primary-light-color;
   margin-left: 7.5%;
+  font-size: $-fs-19;
 } 
 
 .tabs {
@@ -29,6 +30,7 @@
 .tabs__item {
   width: 12%;
   text-align: start;
+  font-size: $-fs-19;
 }
 
 
@@ -38,6 +40,7 @@
   width: 70%;
   justify-content: space-between;
   text-align: start;
+  font-size: $-fs-19;
 }
 
 .tabs__item__item {
@@ -47,6 +50,7 @@
 .tabs__item-3 {
     width: 18%;
     text-align: end;
+    font-size: $-fs-19;
 }
 
 @media screen and (max-width: 768px) {

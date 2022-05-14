@@ -308,20 +308,11 @@ template {
 [hidden] {
   display: none; }
 
-.fs-title-m {
-  font-size: 2.0625rem; }
+.fs-paragraph {
+  font-size: 1.1875rem; }
 
-.fs-title-l {
-  font-size: 2.75rem; }
-
-.fs-title-s {
-  font-size: 1.5625rem; }
-
-.fs-center {
-  text-align: center; }
-
-.fs-bleeding {
-  margin-top: 11vh; }
+.fs-paragraph-m {
+  font-size: 1.375rem; }
 
 .fs-title-m {
   font-size: 2.0625rem; }
@@ -337,6 +328,31 @@ template {
 
 .fs-bleeding {
   margin-top: 11vh; }
+
+.fs-paragraph {
+  font-size: 1.1875rem; }
+
+.fs-paragraph-m {
+  font-size: 1.375rem; }
+
+.fs-title-m {
+  font-size: 2.0625rem; }
+
+.fs-title-l {
+  font-size: 2.75rem; }
+
+.fs-title-s {
+  font-size: 1.5625rem; }
+
+.fs-center {
+  text-align: center; }
+
+.fs-bleeding {
+  margin-top: 11vh; }
+
+body {
+  background-color: #Fdf7f7;
+  font-family: "PT Serif", serif; }
 
 #logo-head {
   position: absolute;
@@ -393,7 +409,8 @@ template {
   border-width: 1px;
   padding: 12px;
   background-color: #Fdf7f7;
-  margin-left: 7.5%; }
+  margin-left: 7.5%;
+  font-size: 1.1875rem; }
 
 .tabs {
   margin: 0 auto;
@@ -411,21 +428,24 @@ template {
 
 .tabs__item {
   width: 12%;
-  text-align: start; }
+  text-align: start;
+  font-size: 1.1875rem; }
 
 .tabs__item-2 {
   display: flex;
   flex-direction: row;
   width: 70%;
   justify-content: space-between;
-  text-align: start; }
+  text-align: start;
+  font-size: 1.1875rem; }
 
 .tabs__item__item {
   width: 33%; }
 
 .tabs__item-3 {
   width: 18%;
-  text-align: end; }
+  text-align: end;
+  font-size: 1.1875rem; }
 
 @media screen and (max-width: 768px) {
   .tabs__date {
@@ -478,7 +498,8 @@ template {
   margin: 0 auto;
   width: 85%;
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  font-size: 1.1875rem; }
 
 .checkbox__body-50 {
   display: flex;
@@ -529,7 +550,8 @@ template {
 .tof {
   width: 75%;
   display: flex;
-  margin-top: 1rem; }
+  margin-top: 1rem;
+  font-size: 1.1875rem; }
 
 .tof__input {
   margin-left: 1vh;
@@ -549,7 +571,8 @@ template {
   border-radius: 0.25rem;
   line-height: 1.5;
   background-color: #0d6efd;
-  color: #fff; }
+  color: #fff;
+  font-size: 1.1875rem; }
 
 @media screen and (max-width: 1200px) {
   .checkbox {
@@ -572,6 +595,68 @@ template {
     width: 100%;
     justify-content: center;
     margin-right: 0vh; } }
+
+.container-shop {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  width: 85%;
+  margin-bottom: 1vh;
+  flex-wrap: wrap; }
+
+.card__text {
+  width: 100%; }
+
+.container-card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+.card {
+  display: flex;
+  min-width: max-content;
+  background-color: #Fdf7f7;
+  width: 33.33%;
+  border: none;
+  padding: 1vh;
+  margin-bottom: 5vh; }
+
+.card__aside {
+  margin: 0 auto; }
+
+.card__image {
+  width: 36vh; }
+
+.card__header {
+  padding-top: 3vh;
+  padding-bottom: 3vh; }
+
+.card__title {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 35vh; }
+
+.card__subtitle {
+  text-align: center;
+  margin-top: 2vh; }
+
+@media screen and (max-width: 1200px) {
+  .card {
+    width: 50%; }
+  .card__image {
+    width: 34.6vh; }
+  .card__title {
+    width: 33.6vh; } }
+
+@media screen and (max-width: 768px) {
+  .container-shop {
+    width: 100%; }
+  .card {
+    width: 100%; }
+  .card__image {
+    width: 33.5vh; }
+  .card__title {
+    width: 32.5vh; } }
 
 .container-menu {
   margin-top: 24.5px;
@@ -639,7 +724,3 @@ template {
   min-width: 100%;
   min-height: 100%;
   z-index: -2; }
-
-body {
-  background-color: #Fdf7f7;
-  font-family: "League Spartan", sans-serif; }

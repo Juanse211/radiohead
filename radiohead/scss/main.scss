@@ -8,6 +8,11 @@
 @import "settings/typography";
 @import "settings/variables";
 
+body {
+  background-color: $primary-light-color;
+  font-family: $font-family;
+}
+
 // atoms
 @import "atoms/logo-head";
 @import "atoms/logos";
@@ -19,6 +24,8 @@
 @import "molecules/picture-kid-a";
 @import "molecules/term-of-service";
 @import "molecules/form";
+@import "molecules/card";
+
 //organisms
 @import "organisms/footer";
 @import "organisms/background";
@@ -27,8 +34,3 @@
 @import "tools/justify";
 @import "tools/sidebar";
 @import "tools/toRem";
-
-body {
-  background-color: $primary-light-color;
-  font-family: $font-family;
-}
