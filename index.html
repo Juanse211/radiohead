@@ -16,17 +16,27 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+  <!--icon-->
+  <script src="https://kit.fontawesome.com/850245986d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <header class="container-logo">
-    <div>
-    <a href="index.html"><img src="radiohead/files/Radiohead.png" alt="Logo Radiohead " id="logo-head"></a>
-    </div>
+  <header>
+    <nav>
+      <div class="container-logo">
+        <a href="index.html"><img src="radiohead/files/radiohead.png" alt="Logo Radiohead " id="logo-head"></a>
+        <a href="index.html"><img src="radiohead/files/radiohead-dark.png" alt="Logo Radiohead dark " id="logo-head-dark"></a>
+      </div>
+
+      <button class="button__body" id="button__body">
+        <span><i class="fa-solid fa-sun"></i></span>
+        <span><i class="fa-solid fa-moon"></i></span>
+      </button>
+    </nav>
   </header>
 
   <section class="container-video">
-    <video id="video-head" src="radiohead/files/KID A MNESIA EXHIBITION trailer.mp4" poster="radiohead/files/kidAmnesiaPoster.jpg" controls autcdlay muted></video>
+    <video id="video-head" src="radiohead/files/KID A MNESIA EXHIBITION trailer.mp4" poster="radiohead/files/kidAmnesiaPoster.jpg" controls autoplay muted></video>
   </section>
 
   <article class="container-arrow"><a href="#main-nav__link"><img src="radiohead/files/down-arrow.png"id="arrow" /></a>
@@ -38,8 +48,11 @@
 
   <section class="container-button">
     <div class="button-logo">
-      <a href="https://www.epicgames.com/store/es-ES/p/kid-a-mnesia-exhibition"><img class="button-logo__body" src="radiohead/files/Epic games.png" alt="Logo Epic Games"/></a>
-      <a href="https://store.playstation.com/es-mx/concept/10003085/"><img class="button-logo__body" src="radiohead/files/PlayStation-Logo.wine.png" alt="Logo PlayStation"/></a>
+      <a id="epic-games" href="https://www.epicgames.com/store/es-ES/p/kid-a-mnesia-exhibition"><img id="epic-games" src="radiohead/files/epic-games.png" alt="Logo Epic Games"/></a>
+      <a id="epic-games-dark" href="https://www.epicgames.com/store/es-ES/p/kid-a-mnesia-exhibition"><img id="epic-games-dark" src="radiohead/files/epic-games-dark.png" alt="Logo Epic Games"/></a>
+
+      <a id="play-station" href="https://store.playstation.com/es-mx/concept/10003085/"><img id="play-station" src="radiohead/files/play-station.png" alt="Logo PlayStation"/></a>
+      <a id="play-station-dark" href="https://store.playstation.com/es-mx/concept/10003085/"><img id="play-station-dark" src="radiohead/files/play-station-dark.png" alt="Logo PlayStation"/></a>
     </div>
   </section>
 
@@ -59,6 +72,7 @@
     </div>
   </footer>
   
+  <script src="radiohead/js/main.js"></script>
 </body>
 
 </html>

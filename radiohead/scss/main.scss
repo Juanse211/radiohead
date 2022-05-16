@@ -1,25 +1,20 @@
-// generic
-@import "generic/boxSizing";
-@import "generic/normalize";
-
 // settings
 @import "settings/colors";
 @import "settings/layout";
 @import "settings/typography";
 @import "settings/variables";
 
-body {
-  background-color: $primary-light-color;
-  font-family: $font-family;
-}
+// generic
+@import "generic/boxSizing";
+@import "generic/normalize";
+@import "generic/body";
 
 // atoms
-@import "atoms/logo-head";
 @import "atoms/logos";
 @import "atoms/arrow";
 
 // molecules
-@import "molecules/tabla";
+@import "molecules/table";
 @import "molecules/video";
 @import "molecules/picture-kid-a";
 @import "molecules/term-of-service";
@@ -27,8 +22,8 @@ body {
 @import "molecules/card";
 
 //organisms
+@import "organisms/header";
 @import "organisms/footer";
-@import "organisms/background";
 
 // tools
 @import "tools/justify";

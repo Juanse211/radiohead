@@ -1,5 +1,4 @@
 // Typography font
-
 $font-family: 'PT Serif', serif;
 
 // Typography scale
@@ -14,7 +13,7 @@ $-fs-25: 25 / $fs-base + rem;
 $-fs-33: 33 / $fs-base + rem;
 $-fs-44: 44 / $fs-base + rem;
 
-//Typography applications
+//Typography size
 .fs-paragraph {
   font-size: $-fs-19;
 }
@@ -34,14 +33,21 @@ $-fs-44: 44 / $fs-base + rem;
 .fs-title-s{
   font-size: $-fs-25;
 }
-//Typography aline
 
+//Typography color
+.fs-color{
+  color: $primary-dark-color;
+  body.dark & {
+    color: $primary-light-color;
+  }
+}
+
+//Typography aline
 .fs-center{
   text-align: center;
 }
 
 // Bleeding
-
 .fs-bleeding{
-  margin-top: 11vh;
+  margin-top: 10vh;
 }

@@ -1,0 +1,8 @@
+body {
+  background-color: $primary-light-color;
+  font-family: $font-family;
+  transition: .3s ease all;
+  &.dark {
+    background-color: $primary-dark-color;
+  }
+}
