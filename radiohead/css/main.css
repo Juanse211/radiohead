@@ -653,7 +653,6 @@ body.dark #play-station {
   display: flex;
   flex-direction: row;
   margin: 0 auto;
-  width: 85%;
   margin-bottom: 1vh;
   flex-wrap: wrap; }
 
@@ -669,9 +668,10 @@ body.dark #play-station {
   display: flex;
   min-width: max-content;
   background-color: transparent;
-  width: 33.33%;
+  width: 33%;
   border: none;
   padding: 1vh;
+  margin: 0 auto;
   margin-bottom: 5vh; }
 
 .card__aside {
@@ -696,23 +696,13 @@ body.dark #play-station {
 .card__subtitle-money {
   width: 100%; }
 
-@media screen and (max-width: 1200px) {
-  .card {
-    width: 50%; }
-  .card__image {
-    width: 34.6vh; }
-  .card__title {
-    width: 33.6vh; } }
-
 @media screen and (max-width: 768px) {
-  .container-shop {
-    width: 100%; }
   .card {
     width: 100%; }
   .card__image {
-    width: 33.5vh; }
+    width: 25vh; }
   .card__title {
-    width: 32.5vh; } }
+    width: 24vh; } }
 
 .container-menu {
   margin-top: 24.5px;
@@ -840,7 +830,7 @@ span {
   position: relative;
   background: none;
   color: #Fdf7f7;
-  z-index: 1; }
+  z-index: 2; }
 
 @media screen and (max-width: 768px) {
   #logo-head {
