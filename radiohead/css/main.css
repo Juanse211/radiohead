@@ -744,9 +744,10 @@ body.dark #play-station {
   border-width: 0.3vh;
   border-color: #fdf7f7;
   border-style: solid;
-  width: 25vh;
+  width: 26vh;
   height: 3.3vh;
-  transition: background-color 0.5s; }
+  transition: background-color 0.5s;
+  font-size: 1.7vh; }
 
 @media screen and (max-width: 1200px) {
   #logo-head {
@@ -757,17 +758,18 @@ body.dark #play-station {
     height: 253px; } }
 
 @media screen and (max-width: 768px) {
-  .container-menu {
-    height: 31vh; }
   .div-menu {
     flex-direction: column;
     align-items: center; }
   .menu {
     margin-bottom: 20px;
     margin-top: 20px;
-    font-size: 2.2vh;
+    font-size: 2vh;
     width: 100%;
-    height: 3.5vh; } }
+    height: 3.5vh;
+    font-size: 1.7vh; }
+  .container-menu {
+    height: 31vh; } }
 
 nav {
   top: 0%;
