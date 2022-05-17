@@ -49,25 +49,27 @@ $-fs-44: 44 / $fs-base + rem;
     }
 }
 
-//Typography aline
-.fs-center{
-  margin: 0 auto;
-  text-align: center;
-}
-
 // Bleeding
-.fs-bleeding{
+.fs-bleeding {
   margin-top: 10vh;
 }
 
-@media screen and (max-width: 768px) {
+//Typography aline
+.fs-center{
+  text-align: center;
+}
+
+
+@media screen and (max-width: 1200px) {
   .fs-start {
-    display: flex;
-    justify-content: start;
+    text-align: left;
+  }
+
+  .fs-center-tab {
+    text-align: center;
   }
 
   .fs-end {
-    display: flex;
-    justify-content: end;
+    text-align: right;
   }
 }

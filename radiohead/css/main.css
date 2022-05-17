@@ -23,20 +23,19 @@
   body.dark .fs-primary-color {
     color: #dd6b58; }
 
-.fs-center {
-  margin: 0 auto;
-  text-align: center; }
-
 .fs-bleeding {
   margin-top: 10vh; }
 
-@media screen and (max-width: 768px) {
+.fs-center {
+  text-align: center; }
+
+@media screen and (max-width: 1200px) {
   .fs-start {
-    display: flex;
-    justify-content: start; }
+    text-align: left; }
+  .fs-center-tab {
+    text-align: center; }
   .fs-end {
-    display: flex;
-    justify-content: end; } }
+    text-align: right; } }
 
 body {
   background-color: #Fdf7f7;
@@ -480,8 +479,6 @@ body.dark #play-station {
   display: flex;
   flex-direction: row;
   width: 70%;
-  justify-content: space-between;
-  text-align: start;
   font-size: 1.1875rem; }
 
 .tabs__item__item {
@@ -520,7 +517,7 @@ body.dark #play-station {
     width: 100%;
     padding-bottom: .5vh; }
   .tabs__item__item {
-    text-align: center; }
+    width: 33.33%; }
   .tabs__item-3 {
     margin: 0 auto;
     width: max-content;
@@ -562,7 +559,7 @@ body.dark #play-station {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  width: 100%;
+  width: 85%;
   font-size: 1.1875rem; }
 
 .checkbox__body {
