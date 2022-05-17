@@ -2,16 +2,17 @@
 @import "settings/colors";
 @import "settings/layout";
 @import "settings/typography";
-@import "settings/variables";
 
 // generic
+@import "generic/body";
 @import "generic/boxSizing";
 @import "generic/normalize";
-@import "generic/body";
 
 // atoms
-@import "atoms/logos";
 @import "atoms/arrow";
+@import "atoms/button";
+@import "atoms/logos";
+@import "atoms/stage";
 
 // molecules
 @import "molecules/table";
@@ -22,8 +23,8 @@
 @import "molecules/card";
 
 //organisms
-@import "organisms/header";
 @import "organisms/footer";
+@import "organisms/header";
 
 // tools
 @import "tools/justify";

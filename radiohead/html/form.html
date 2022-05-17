@@ -20,7 +20,7 @@
         <a href="../../index.html"><img src="../files/radiohead-dark.png" alt="Logo Radiohead dark " id="logo-head-dark"></a>
       </div>
   
-      <button class="button__body" id="button__body">
+      <button class="switch__body" id="switch__body">
         <span><i class="fa-solid fa-sun"></i></span>
         <span><i class="fa-solid fa-moon"></i></span>
       </button>
@@ -28,71 +28,67 @@
   </header>
 
   <section class="container-text ">
-    <h1 class="fs-center fs-bleeding fs-title-m">PROVIDE YOUR DETAILS</h1>
+    <h1 class="fs-center fs-bleeding fs-title-m fs-color">PROVIDE YOUR DETAILS</h1>
   </section>
 
-
   <form action="#" method="post" enctype="application/x-www-form-urlencoded">
-    <section>
-      <fieldset class="checkbox">
-        <legend class="fs-title-s">Data</legend>
-        <div class="checkbox__body-50">
-          <label class="checkbox__label" for="text">First Name</label>
-          <input class="checkbox__input" id="text" type="text" name="text">
-        </div>
+    <fieldset class="checkbox">
+      <legend class="fs-title-s fs-color">Data</legend>
+      <div class="checkbox__body-50">
+        <label class="checkbox__label" for="text">First Name</label>
+        <input class="checkbox__input" id="text" type="text" name="text">
+      </div>
 
-        <div class="checkbox__body-50">
-          <label class="checkbox__label" for="formulary-data-last-name">Last Name</label>
-          <input class="checkbox__input" id="text" type="text" name="formulary-data-last-name">
-        </div>
+      <div class="checkbox__body-50">
+        <label class="checkbox__label" for="formulary-data-last-name">Last Name</label>
+        <input class="checkbox__input" id="text" type="text" name="formulary-data-last-name">
+      </div>
 
-        <div class="checkbox__body-66">
-          <label class="checkbox__label" for="email-address">Email Address</label>
-          <input class="checkbox__input" type="email" name="email-address">
-        </div>
+      <div class="checkbox__body-66">
+        <label class="checkbox__label" for="email-address">Email Address</label>
+        <input class="checkbox__input" type="email" name="email-address">
+      </div>
 
-          <div class="checkbox__body-33">
-          <label class="checkbox__label" for="phone">Phone</label>
-          <input class="checkbox__input" type="phone" name="phone">
-        </div>
+      <div class="checkbox__body-33">
+        <label class="checkbox__label" for="phone">Phone</label>
+        <input class="checkbox__input" type="phone" name="phone">
+      </div>
 
-        <div class="checkbox__body-66">
-          <label class="checkbox__label" for="email-confirm">Confirm Email</label>
-          <input class="checkbox__input" type="email" name="email-confirm">
-        </div>
+      <div class="checkbox__body-66">
+        <label class="checkbox__label" for="email-confirm">Confirm Email</label>
+        <input class="checkbox__input" type="email" name="email-confirm">
+      </div>
 
-        <div class="checkbox__body-33">
-          <label class="checkbox__label" for="zone">Zone</label>
-          <select class="checkbox__input name="zone">
-            <option value="" hidden>Chose option </option>
-            <option value="p">Premium front nave</option>
-            <option value="c">Central nave</option>
-            <option value="r">Rear nave</option>
-            <option value="ssl">Side stage left</option>
-            <option value="ssr">Side stage right</option>
-            <option value="sal">Side aisle left</option>
-            <option value="ssl">Side aisle right</option>
-          </select>
-        </div>
-      </fieldset>
-    </section>
-
-    <div class="container-picture">
-      <img class="stage" src="../files/RAF-Centenary-Concert-Seating-Areas copia.png" alt="stage">
-    </div>
-
-    <div class="checkbox">
-      <div class="tof">
-        <label for="acepta">I agree to the <a href="../html/terms-of-service.html">Term of Service and PrivacyPolicy</a></label>
-        <input class="tof__input" id="acepta" type="checkbox" name="acepta" value="1" />
+      <div class="checkbox__body-33">
+        <label class="checkbox__label" for="zone">Zone</label>
+        <select class="checkbox__input name="zone">
+          <option value="" hidden>Chose option </option>
+          <option value="p">Premium front nave</option>
+          <option value="c">Central nave</option>
+          <option value="r">Rear nave</option>
+          <option value="ssl">Side stage left</option>
+          <option value="ssr">Side stage right</option>
+          <option value="sal">Side aisle left</option>
+          <option value="ssl">Side aisle right</option>
+        </select>
       </div>
       
-      <div class="button">
-        <input class="button__body" type="submit" value="Continue" />
+      <div class="container-picture">
+        <img class="stage" src="../files/RAF-Centenary-Concert-Seating-Areas copia.png" alt="stage">
       </div>
-      </form>
-    </div>
-    
+
+      <div class="checkbox">
+        <div class="tof fs-color">
+          <label for="acepta ">I agree to the <a href="../html/terms-of-service.html" class="fs-primary-color">Term of Service and PrivacyPolicy</a></label>
+          <input class="tof__input" id="acepta" type="checkbox" name="acepta" value="1" />
+        </div>
+      
+        <div class="button">
+          <input class="button__body" type="submit" value="Continue" />
+        </div>
+      </div>
+    </fieldset>
+  </form>
 
   <footer class="container-menu container-fluid ">
     <div class="row g-3 ">

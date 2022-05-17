@@ -6,39 +6,45 @@
   font-size: $-fs-19;
 }
 
-.checkbox__body-50{
-  display: flex;
-  flex-direction: column ;
-  padding-left: 0.5vh;
-  padding-right: 0.5vh;
-  width: 50%;
-  
-}
-.checkbox__body-66{
+.checkbox__body-66 {
   display: flex;
   flex-direction: column;
   padding-left: 0.5vh;
-  padding-right: 0.5vh;   
+  padding-right: 0.5vh;
   width: 66.66666667%;
 }
-
-.checkbox__body-33{
+  
+.checkbox__body-50 {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0.5vh;
+  padding-right: 0.5vh;
+  width: 50%;
+}
+  
+.checkbox__body-33 {
   display: flex;
   flex-direction: column;
   padding-left: 0.5vh;
   padding-right: 0.5vh;
   width: 33.33333333%;
 }
-
-.checkbox__label{
+  
+.checkbox__label {
   display: block;
   margin-bottom: 0.5rem;
   margin-top: 1rem;
+  color: $dark-color;
+  body.dark & {
+    color: $light-color;
+  }
 }
-
-.checkbox__input{
+  
+.checkbox__input {
   width: 100%;
-  border: 1px solid #ced4da;
+  border: 1px solid $dark-color;
+  background-color: $gray-color;
+  color: $dark-color;
   border-radius: 0.25rem;
   line-height: 1.5;
   padding: 0.375rem 0.75rem;
@@ -46,82 +52,59 @@
   padding-right: 0.75rem;
   padding-bottom: 0.375rem;
   padding-left: 0.75rem;
+  body.dark & {
+    color: $light-color;
+    border-color: $dark-color;
+    background-color: $dark-gray-color;
+  }
 }
-
-.container-picture {
-  width: 96%;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.stage {
+  
+.checkbox-2 {
   width: 100%;
-  height: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: $-fs-19;
 }
 
-.tof{
-  width: 75%;
+.tof {
+  min-width: 79.5%;
   display: flex;
   margin-top: 1rem;
   font-size: $-fs-19;
 }
-
-.tof__input{
+  
+.tof__input {
   margin-left: 1vh;
   margin-top: 0.7vh;
 }
 
-.button{
-  display: flex;
-  width:20%;
-  margin-top: 1rem;
-  justify-content: end;
-  margin-right: 2vh;
-}
-
-.button__body{
-  width: max-content;
-  height: 4vh;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
-  line-height: 1.5;
-  background-color: #0d6efd;
-  color: #fff;
-  font-size: $-fs-19;
-}
-
 @media screen and (max-width: 1200px) {
   .checkbox{
-    width: 100%;
-  }
-
-  .tof{
-    margin-left: 2vh;
+    width: 95%;
+    padding-left: 0%;
+    padding-right: 0%;
   }
 }
 
 @media screen and (max-width: 768px) {
   .checkbox__body-50{
-    width: 100%
+    width: 100%;
+    padding: 0%;
   }
   .checkbox__body-33{
     width: 100%;
+    padding: 0%;
   }
 
   .checkbox__body-66{
     width: 100%;
+    padding: 0%;
   }
 
   .tof{
     width: 100%;
     justify-content:center;
     margin-left: 0vh;
-  }
-  
-
-  .button{
-    width: 100%;
-    justify-content: center;
-    margin-right: 0vh;
   }
 }

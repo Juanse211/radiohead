@@ -36,18 +36,38 @@ $-fs-44: 44 / $fs-base + rem;
 
 //Typography color
 .fs-color{
+  color: $dark-color;
+  body.dark & {
+    color: $light-color;
+  }
+}
+
+.fs-primary-color{
   color: $primary-dark-color;
   body.dark & {
-    color: $primary-light-color;
-  }
+      color: $primary-light-color;
+    }
 }
 
 //Typography aline
 .fs-center{
+  margin: 0 auto;
   text-align: center;
 }
 
 // Bleeding
 .fs-bleeding{
   margin-top: 10vh;
+}
+
+@media screen and (max-width: 768px) {
+  .fs-start {
+    display: flex;
+    justify-content: start;
+  }
+
+  .fs-end {
+    display: flex;
+    justify-content: end;
+  }
 }

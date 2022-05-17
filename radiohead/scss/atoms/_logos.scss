@@ -7,40 +7,39 @@
   justify-content: center;
   margin-top: 39.5px;
   margin-bottom: 64px;
+}
 
-  .button-logo {
-    display: flex;
-    width: 1240px;
-    justify-content: space-around;
-
-    #epic-games {
-      body.dark & {
-        display: none;
-      }
-    }
-
-    #epic-games-dark {
-      display: none;
-      body.dark & {
-        display: block;
-      }
-    }
-
-    #play-station {
-      body.dark & {
-        display: none;
-      }
-    }
-
-    #play-station-dark {
-      display: none;
-      body.dark & {
-        display: block;
-      }
-    }
+.button-logo {
+  display: flex;
+  width: 1240px;
+  justify-content: space-around;
+}
+    
+#epic-games {
+  body.dark & {
+  display: none;
   }
 }
 
+#epic-games-dark {
+  display: none;
+  body.dark & {
+    display: block;
+  }
+}
+
+#play-station {
+  body.dark & {
+    display: none;
+  }
+}
+
+#play-station-dark {
+  display: none;
+  body.dark & {
+    display: block;
+  }
+}
 
 @media screen and (max-width: 768px) {
   #epic-games {
