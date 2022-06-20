@@ -4,7 +4,9 @@ btnSwitch.addEventListener('click', () => {
   document.body.classList.toggle('dark');
   btnSwitch.classList.toggle('active');
 
-// Save mode in local storage
+/* Save mode in 
+local storage
+*/
   if(document.body.classList.contains('dark')){
     localStorage.setItem('dark-mode', 'true');
   } else{
@@ -12,7 +14,7 @@ btnSwitch.addEventListener('click', () => {
   }
 });
 
-//
+
 if(localStorage.getItem('dark-mode') === 'true'){
   document.body.classList.add('dark');
 } else{
@@ -26,4 +28,4 @@ if(localStorage.getItem('dark-mode') === 'true'){
 } else {
 	document.body.classList.remove('dark');
 	btnSwitch.classList.remove('active');
-} 
+}
