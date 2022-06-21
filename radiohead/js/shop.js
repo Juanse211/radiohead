@@ -11,6 +11,8 @@ class AddFineArt {
 }
 }
 
+
+
 const fineArt = [
   new AddFineArt(0, "RESIDENTAL NEMESIS", 38, 0 , 1),
   new AddFineArt(1, "THIS MIGHT BE A COVER", 38, 0, 2),
@@ -35,19 +37,22 @@ const fineArt = [
   new AddFineArt(20, "MINOS WALL I", 38, 0, 21),
   new AddFineArt(21, "MINOS WALL II", 38, 0, 22),
   new AddFineArt(22, "MINOS WALL III", 38, 0, 23)
+
 ]
 
 const containerCard = document.getElementById("container-card")
+let imgNames = [];
 
 fineArt.forEach((art) => {
   const card = document.createElement("div")
   const artName = art.name.toUpperCase()
   const artprice = parseFloat(art.price).toFixed(2)
+  imgNames.push(art.img);
 
   card.className =  "card"
   card.innerHTML =  
   `<div class="card__aside">
-    <img class="card__image" src="../files/shop/${art.img}.jpg"/>
+    <img class="card__image img__modal" src="../files/shop/${art.img}.jpg"/>
   </div>
   <div class="card__header">
     <h4 class="card__title fs-paragraph fs-color">${artName}</h4>
@@ -58,3 +63,44 @@ fineArt.forEach((art) => {
   `
   containerCard.append(card)
 })
+
+
+
+// MODAL
+
+
+const modalContainer = document.querySelector('#modal-container')
+const openModal = document.querySelector('#open-modal')
+const closeModal = document.querySelector('#close-modal')
+const modal = document.querySelector('#modal')
+
+
+const img = document.getElementsByClassName("img__modal")
+
+
+for (let i = 0; i < img.length; i++) {
+  img[i].addEventListener('click', (e) => {
+  console.log(e.target)
+  modalContainer.classList.add('modal-container--visible')
+
+    modalContainer.innerHTML =
+  `
+  <div id="modal" class="my-modal">
+    <img src="../files/shop/${imgNames[i]}.jpg" > 
+    <button> Add to cart </button>
+    <button id="close-modal-${i}"> X </button>
+  </div>
+  `
+  const button = document.getElementById(`close-modal-${i}`);
+  
+  button.addEventListener('click', () => {
+  modalContainer.classList.remove('modal-container--visible')
+  })
+
+  })
+  img[i].addEventListener('mouseover', (e) => {
+
+  })
+
+}
+
