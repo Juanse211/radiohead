@@ -86,9 +86,13 @@ for (let i = 0; i < img.length; i++) {
     modalContainer.innerHTML =
   `
   <div id="modal" class="my-modal">
-    <img src="../files/shop/${imgNames[i]}.jpg" > 
-    <button> Add to cart </button>
-    <button id="close-modal-${i}"> X </button>
+    <div id="img-position">
+      <img id="img-modal" src="../files/shop/${imgNames[i]}.jpg" > 
+    </div>
+    <div id="button-position">
+      <button id="button-cart"> Add to cart </button>
+      <button id="close-modal-${i}"> X </button>
+    </div>
   </div>
   `
   const button = document.getElementById(`close-modal-${i}`);
@@ -99,7 +103,6 @@ for (let i = 0; i < img.length; i++) {
 
   })
   img[i].addEventListener('mouseover', (e) => {
-
   })
 
 }
