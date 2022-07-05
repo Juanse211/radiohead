@@ -1,7 +1,6 @@
 class AddFineArt {
-  constructor(id,stock, name, price, amount, img ) {
+  constructor(id, name, price, amount, img ) {
     this.id = id
-    this.stock = stock
     this.name = name
     this.price = price
     this.amount = amount
@@ -17,7 +16,7 @@ const fineArt = [];
 function cargarDatosDesdeDb(){
     for(let i=0;i<dataBase.length;i++)
     {
-        const newItem = new AddFineArt(dataBase[i].id, dataBase[i].stock, dataBase[i].name, dataBase[i].price, dataBase[i].amount, dataBase[i].img)
+        const newItem = new AddFineArt(dataBase[i].id, dataBase[i].name, dataBase[i].price, dataBase[i].amount, dataBase[i].img)
         fineArt.push(newItem)
     }
 }
@@ -86,15 +85,44 @@ for (let i = 0; i < img.length; i++) {
     modalContainer.innerHTML =
     `
     <div id="modal" class="my-modal">
-      <div id="img-position">
-        <img id="img-modal" src="../files/shop/${imgNames[i]}.jpg" > 
+      <div id="modal__aside">
+        <img id="modal__img" src="../files/shop/${imgNames[i]}.jpg" > 
       </div>
-      <div id="button-position">
+      <div id="modal__section">
         <button id="close-modal-${i}" class="close-modal"> X </button>
-        <h4>${art.name}</h4>
-        <h5<>${art.priceArt}</h5>
-        <button id="add-to-cart-${i}" class="add-to-cart"> Add to cart </button>
-        ${art.stock === false ? '<p> OUT OF STOCK </p>' : ''}
+        <div id="modal__header">
+          <h4 class="fs-color">${art.name}</h4>
+          <h5 class="fs-color">${art.priceArt}</h5>
+        </div>
+        <form id="modal__body">
+          <div id="modal__sub__body">
+            <div class="checkbox__body-66 fs-color modal__size">
+              <select class="checkbox__input">
+                <option value="" hidden>Chose the size</option>
+                <option value="12">12'x12'</option>
+                <option value="28">28'x28'</option>
+                <option value="40">40'x40'</option>
+              </select>
+            </div>
+            <div class="checkbox__body-33 modal__quantity">
+              <input class="checkbox__input" type="number" id="quantity" name="quantity" value="1" min="0">
+            </div>
+          </div>
+          <div id="modal__cart">
+            <a href="#"></a>
+            <input id="add-to-cart-${i}" class="button__body add-to-cart" type="submit" value="Add to cart" />
+          </div>
+        </form>
+        <div id="modal__footer">
+          <ul>
+            <li>
+              Fine art print (200gsm)
+            </li> 
+            <li>
+              A museum-quality fine art print paper with a textured, matt finish. 
+            </li> 
+          </ul>
+        </div>
       </div>
     </div>
     `
@@ -114,5 +142,3 @@ for (let i = 0; i < img.length; i++) {
 
   })
 }
-
-
