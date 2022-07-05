@@ -1,0 +1,28 @@
+.container-cart-modal{
+  display: flex;
+  flex-direction: row-reverse;
+  height: max-content;
+  width: 100% ;
+  background-color: $dark-color;
+  position: fixed;
+  z-index: 1;
+
+}
+
+.cart-modal {
+  display: flex;
+  position: fixed;
+  margin-top: 3vh;
+  margin-right: 3.1vh;
+  color: $light-color;
+  background-color: $dark-color;
+  width: 20vh;
+  height: 10vh;
+  border-radius: 5px;
+  padding: 20px;
+  z-index: 2;
+}
+
+.cart-modal-visible{
+  visibility: visible;
+}
