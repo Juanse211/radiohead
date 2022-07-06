@@ -1,22 +1,28 @@
-const containerCartModal = document.querySelector('.container-cart-modal')
-const cartModal = document.querySelector('.cart-modal')
-const closeCart = document.querySelector('#button__close-cart')
-const cartImg = document.querySelector('.carts')
-const openCart = document.querySelector('.open-cart')
-const containerModal = document.querySelector('.container-cart-modal')
+console.log("Database data: ", dataBase[0].id)
+console.log('HOLA')
+const cart = [];
 
-closeCart.addEventListener("click", (e) =>{
-  containerCartModal.classList.remove('cart-modal-visible')
-})
-
-
-for (let i = 0; i < cartImg.length; i++) {
-  cartImg[i].addEventListener("click", (e) =>{
-
-    containerCartModal.classList.add('cart-modal-visible')
-    containerCartModal.innerHTML = 
-    `
-
-    `
-  })
+function addToCart (id){
+  console.log('pasa')
+  const stock = dataBase.find((art) => art.id == id)
+    Toastify({
+    text: "Added to cart",
+    duration: 1500,
+  }).showToast();
 }
+
+
+
+function removeToCart (id){
+  console.log('elimi')
+  const stock = dataBase.find((art) => art.id == id)
+  
+}
+
+
+
+const cartImg = document.getElementsByClassName('carts')
+
+
+
+const containerModal = document.querySelector('#container-cart-modal')

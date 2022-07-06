@@ -22,14 +22,11 @@ function cargarDatosDesdeDb(){
 }
 
 cargarDatosDesdeDb();
-console.log("DATABASE: ", fineArt);
 
 function buscarFineArtEnDom(id){
    const value = document.getElementById(`FineArt-${id}`)
    return value
 }
-
-
 
 const containerCard = document.getElementById("container-card")
 let imgNames = [];
@@ -41,7 +38,6 @@ fineArt.forEach((art) => {
   const artStock = art.stock
 
   imgNames.push(art.img);
-  console.log("Tipo: ",typeof artStock)
   card.className =  "card"
   card.innerHTML =  
   `<div class="card__aside">
@@ -58,21 +54,14 @@ fineArt.forEach((art) => {
   containerCard.append(card)
 })
 
-// CART
-
-const cart = [];
-
 // MODAL
-
 
 const modalContainer = document.querySelector('#modal-container')
 const openModal = document.querySelector('#open-modal')
 const closeModal = document.querySelector('#close-modal')
 const modal = document.querySelector('#modal')
 
-
 const img = document.getElementsByClassName("img__modal")
-
 
 for (let i = 0; i < img.length; i++) {
   img[i].addEventListener('click', (e) => {
@@ -89,12 +78,12 @@ for (let i = 0; i < img.length; i++) {
         <img id="modal__img" src="../files/shop/${imgNames[i]}.jpg" > 
       </div>
       <div id="modal__section">
-        <button id="close-modal-${i}" class="close-modal"> X </button>
+        <button id="close-modal-${art.id}" class="close-modal"> X </button>
         <div id="modal__header">
           <h4 class="fs-color">${art.name}</h4>
           <h5 class="fs-color">${art.priceArt}</h5>
         </div>
-        <form id="modal__body">
+        <form id="formArt-${art.id}"class="modal__body form__test">
           <div id="modal__sub__body">
             <div class="checkbox__body-66 fs-color modal__size">
               <select class="checkbox__input">
@@ -110,7 +99,7 @@ for (let i = 0; i < img.length; i++) {
           </div>
           <div id="modal__cart">
             <a href="#"></a>
-            <input id="add-to-cart-${i}" class="button__body add-to-cart" type="submit" value="Add to cart" />
+            <input id="add-to-cart-${art.id}" class="button__body add-to-cart"  type="submit" value="Add to cart" />
           </div>
         </form>
         <div id="modal__footer">
@@ -126,6 +115,15 @@ for (let i = 0; i < img.length; i++) {
       </div>
     </div>
     `
+    
+    const form = document.getElementById(`formArt-${art.id}`);
+    form.addEventListener('submit', (e) => {
+      e.preventDefault()
+      addToCart(Number(e.target.id.split("-")[1]))
+      console.log("El ID es: ", e.target.id.split("-")[1])
+    })
+
+    
     // CLOSE MODAL
     const buttonClose = document.getElementById(`close-modal-${i}`);    
     buttonClose.addEventListener('click', () => {
@@ -137,8 +135,5 @@ for (let i = 0; i < img.length; i++) {
       modalContainer.classList.remove('modal-container--visible')
       }
     })
-
-    // ADD TO CART
-
   })
 }
