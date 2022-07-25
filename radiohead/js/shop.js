@@ -8,18 +8,31 @@ class AddFineArt {
     this.price28 = price28
     this.price40 = price40
   }
-  get priceArt(){
-    return parseInt(this.price).toFixed(2);
+    get priceArt(){
+      return parseInt(this.price).toFixed(2);
   }
     get priceArt28(){
-    return parseInt(this.price28).toFixed(2);
+      return parseInt(this.price28).toFixed(2);
   }
     get priceArt40(){
-    return parseInt(this.price40).toFixed(2);
+      return parseInt(this.price40).toFixed(2);
   }
 }
 
 const fineArt = [];
+
+function updateSelectedPrice(id, currentPrice){
+  const h5 = document.getElementById(`selected-price-${id}`);
+
+  const currentProduct = FUNCION(id);
+
+  //la funcion debe recibir un id, filtrar el arreglo de fineart (linea 22), y devolver el o una copia del objeto con return.
+
+  if(currentPrice == 12) h5.innerHTML = currentProduct.priceArt;
+  if(currentPrice == 28) h5.innerHTML = currentProduct.priceArt28;
+  if(currentPrice == 40) h5.innerHTML = currentProduct.priceArt40;
+}
+
 
 const myRequest = new Request('../json/fineart.json');
 fetch(myRequest)
@@ -27,7 +40,6 @@ fetch(myRequest)
     return resp.json()
   })
   .then((data) => {
-    console.log(data)
     function cargarDatosDesdeDb(){
       for(let i=0;i<data.length;i++)
       {
@@ -38,7 +50,6 @@ fetch(myRequest)
   cargarDatosDesdeDb();
   cardFunction()
   modalFunction()
-  console.log(fineArt)
   })
 
 .catch(error => console.log(error));
@@ -86,8 +97,7 @@ function modalFunction(){
 
       const id = e.target.id.split("-")[1];
       const art = fineArt.find(item => item.id === parseInt(id));
-    // SEE MODAL
-      console.log(art)
+      // SEE MODAL
 
       modalContainer.classList.add('modal-container--visible')
 
@@ -101,12 +111,12 @@ function modalFunction(){
           <button id="close-modal-${art.id}" class="close-modal"> X </button>
           <div id="modal__header">
             <h4 class="fs-color">${art.name}</h4>
-            <h5 class="fs-color">${art.priceArt}</h5>
+            <h5 id="selected-price-${art.id}" class="fs-color">${art.priceArt}</h5>
           </div>
           <form id="formArt-${art.id}"class="modal__body form__test">
             <div id="modal__sub__body">
               <div class="checkbox__body-66 fs-color modal__size">
-                <select class="checkbox__input">
+                <select id="select-box-${art.id}" class="checkbox__input">
                   <option value="" hidden>Chose the size</option>
                   <option value="12">12'x12'</option>
                   <option value="28">28'x28'</option>
@@ -140,10 +150,14 @@ function modalFunction(){
       form.addEventListener('submit', (e) => {
         e.preventDefault()
         addToCart(Number(e.target.id.split("-")[1]))
-        console.log("El ID es: ", e.target.id.split("-")[1])
       })
 
-      
+      const selectPrice = document.getElementById(`select-box-${art.id}`);
+      selectPrice.addEventListener('change', e => {
+        const currentSize =  Number(e.target.options[e.target.selectedIndex].value)
+        updateSelectedPrice(art.id, currentSize)
+      })
+
       // CLOSE MODAL
       const buttonClose = document.getElementById(`close-modal-${i}`);    
       buttonClose.addEventListener('click', () => {

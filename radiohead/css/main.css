@@ -863,30 +863,32 @@ body.dark #play-station {
   #modal__footer {
     width: 100%; } }
 
-.container-cart-modal {
+#container-cart {
   display: flex;
-  flex-direction: row-reverse;
   height: max-content;
   width: 100%;
-  background-color: #2e2e2e;
+  height: 30%;
   position: fixed;
-  z-index: 1; }
+  z-index: 1;
+  background-color: red;
+  opacity: 0;
+  visibility: hidden; }
 
-.cart-modal {
+#carts {
   display: flex;
-  position: fixed;
-  margin-top: 3vh;
-  margin-right: 3.1vh;
   color: #Fdf7f7;
   background-color: #2e2e2e;
   width: 20vh;
   height: 10vh;
   border-radius: 5px;
-  padding: 20px;
   z-index: 2; }
 
 .cart-modal-visible {
+  opacity: 1;
   visibility: visible; }
+
+#cart__img {
+  max-height: 5vh; }
 
 .container-menu {
   margin-top: 24.5px;
