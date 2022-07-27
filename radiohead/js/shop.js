@@ -23,16 +23,20 @@ const fineArt = [];
 
 function updateSelectedPrice(id, currentPrice){
   const h5 = document.getElementById(`selected-price-${id}`);
+  const copyArt = fineArt.filter((art) => art.id === id)
+  const currentProduct = copyArt[0];
 
-  const currentProduct = FUNCION(id);
 
-  //la funcion debe recibir un id, filtrar el arreglo de fineart (linea 22), y devolver el o una copia del objeto con return.
+  if(currentPrice == 12) h5.innerHTML = currentProduct.priceArt
+  if(currentPrice == 28) h5.innerHTML = currentProduct.priceArt28
+  if(currentPrice == 40) h5.innerHTML = currentProduct.priceArt40
 
-  if(currentPrice == 12) h5.innerHTML = currentProduct.priceArt;
-  if(currentPrice == 28) h5.innerHTML = currentProduct.priceArt28;
-  if(currentPrice == 40) h5.innerHTML = currentProduct.priceArt40;
+  // const amount = document.getElementById(`quantity`)
+  // amount.addEventListener('change', e => {
+  //   console.log(amount)
+  // })
+
 }
-
 
 const myRequest = new Request('../json/fineart.json');
 fetch(myRequest)
@@ -111,7 +115,7 @@ function modalFunction(){
           <button id="close-modal-${art.id}" class="close-modal"> X </button>
           <div id="modal__header">
             <h4 class="fs-color">${art.name}</h4>
-            <h5 id="selected-price-${art.id}" class="fs-color">${art.priceArt}</h5>
+            <h5 id="selected-price-${art.id}" class="fs-color"></h5>
           </div>
           <form id="formArt-${art.id}"class="modal__body form__test">
             <div id="modal__sub__body">
@@ -153,7 +157,7 @@ function modalFunction(){
       })
 
       const selectPrice = document.getElementById(`select-box-${art.id}`);
-      selectPrice.addEventListener('change', e => {
+      selectPrice.addEventListener('change', (e) => {
         const currentSize =  Number(e.target.options[e.target.selectedIndex].value)
         updateSelectedPrice(art.id, currentSize)
       })

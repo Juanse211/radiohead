@@ -1,24 +1,24 @@
 #container-cart{
+  top: 9vh;
   display: flex;
   height: max-content;
-  width: 100%;
+  width: 92%;
+  margin-right: auto;
   height: 30%;
   position: fixed;
   z-index: 1;
-  background-color: red;
-  opacity: 0;
-  visibility: hidden;
-
+  background-color: transparent; 
 }
 
 #carts{
-  display: flex;
+  margin-left:auto ;
   color: $light-color;
   background-color: $dark-color;
-  width: 20vh;
-  height: 10vh;
+  width: 40%;
+  height: max-content;
   border-radius: 5px;
   z-index: 2;
+  padding: 1vh;
 }
 
 .cart-modal-visible{
@@ -27,11 +27,17 @@
 }
 
 #cart__body{
-
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 70%;
+  align-content: space-between;
 }
 
 #cart__aside{
-
+  display: flex;
+  flex-direction: row;
+  width: 50%;
 }
 
 #cart__div-img {
@@ -39,22 +45,75 @@
 }
 
 #cart__img{
-  max-height: 5vh;
+  max-height: 8vh;
 }
 
 #cart__name{
+  display: flex;
+  align-items: center;
+}
 
+#cart__name-p{
+  margin: 0;
 }
 
 #cart__price{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 20%;
+}
 
+#cart__price-p{
+  margin: 0;
 }
 
 #cart__amount-close{
-
+  display: flex;
+  width: 30%;
+  align-items: center;
 }
 
 #cart__amount{
-
+  width: 4vh;
+  height: 3vh;
+  margin-right: auto;
 }
 
+#cart__close{
+  margin-left: auto;
+  width: 3vh;
+  height: 3vh;
+}
+
+#cart__footer{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  height: 30%;
+}
+
+#cart__footer-total{
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  margin-right: auto;
+}
+
+#cart__footer-total-sub{
+  margin: 0;
+}
+
+#cart__footer-total-price{
+  margin: 0;
+}
+
+#cart__footer-buy{
+  width: 50%;
+  margin-left: auto;
+}
+
+#cart__footer-imput-buy{
+
+}

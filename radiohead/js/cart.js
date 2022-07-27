@@ -43,11 +43,11 @@ function removeToCart(id) {
 }
 
 
-    //ADD VISUAL CART
-    cartImg.addEventListener('click', (e) => {
-      containerModal.classList.add('cart-modal-visible')
-      containerModal.innerHTML =
-      `
+    // //ADD VISUAL CART
+    // cartImg.addEventListener('click', (e) => {
+    //   containerModal.classList.add('cart-modal-visible')
+    //   containerModal.innerHTML =
+    //   `
 
-      `
-    })
+    //   `
+    // })
