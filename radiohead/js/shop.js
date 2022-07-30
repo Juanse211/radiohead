@@ -21,22 +21,24 @@ class AddFineArt {
 
 const fineArt = [];
 
-function updateSelectedPrice(id, currentPrice){
+function updateSelectedPrice(id, currentSize){
   const h5 = document.getElementById(`selected-price-${id}`);
   const copyArt = fineArt.filter((art) => art.id === id)
   const currentProduct = copyArt[0];
+  
+  const amount = document.getElementById(`quantity`)
 
+  if(currentSize == 12) h5.innerHTML = (currentProduct.priceArt *amount.value).toFixed(2)
+  if(currentSize == 28) h5.innerHTML = (currentProduct.priceArt28 *amount.value).toFixed(2)
+  if(currentSize == 40) h5.innerHTML = (currentProduct.priceArt40 *amount.value).toFixed(2)
 
-  if(currentPrice == 12) h5.innerHTML = currentProduct.priceArt
-  if(currentPrice == 28) h5.innerHTML = currentProduct.priceArt28
-  if(currentPrice == 40) h5.innerHTML = currentProduct.priceArt40
-
-  // const amount = document.getElementById(`quantity`)
-  // amount.addEventListener('change', e => {
-  //   console.log(amount)
-  // })
-
+  amount.addEventListener('change', () => {
+    if(currentSize == 12) h5.innerHTML = (currentProduct.priceArt *amount.value).toFixed(2)
+    if(currentSize == 28) h5.innerHTML = (currentProduct.priceArt28 *amount.value).toFixed(2)
+    if(currentSize == 40) h5.innerHTML = (currentProduct.priceArt40 *amount.value).toFixed(2)
+  })
 }
+
 
 const myRequest = new Request('../json/fineart.json');
 fetch(myRequest)
@@ -56,12 +58,13 @@ fetch(myRequest)
   modalFunction()
   })
 
+
 .catch(error => console.log(error));
 
 
 function buscarFineArtEnDom(id){
-   const value = document.getElementById(`FineArt-${id}`)
-   return value
+  const value = document.getElementById(`FineArt-${id}`)
+  return value
 }
 
 function cardFunction(){
@@ -85,9 +88,8 @@ function cardFunction(){
     </div>
     `
     containerCard.append(card)
-})
+  })
 }
-
 
 // MODAL
 
@@ -133,7 +135,7 @@ function modalFunction(){
             </div>
             <div id="modal__cart">
               <a href="#"></a>
-              <input id="add-to-cart-${art.id}" class="button__body add-to-cart"  type="submit" value="Add to cart" />
+              <input class="button__body" type="submit" value="Add to cart" />
             </div>
           </form>
           <div id="modal__footer">
@@ -150,10 +152,11 @@ function modalFunction(){
       </div>
       `
 
+      // Send product to cart.js
       const form = document.getElementById(`formArt-${art.id}`);
       form.addEventListener('submit', (e) => {
         e.preventDefault()
-        addToCart(Number(e.target.id.split("-")[1]))
+        loadProducts(Number(e.target.id.split("-")[1]))
       })
 
       const selectPrice = document.getElementById(`select-box-${art.id}`);
@@ -161,7 +164,7 @@ function modalFunction(){
         const currentSize =  Number(e.target.options[e.target.selectedIndex].value)
         updateSelectedPrice(art.id, currentSize)
       })
-
+      
       // CLOSE MODAL
       const buttonClose = document.getElementById(`close-modal-${i}`);    
       buttonClose.addEventListener('click', () => {

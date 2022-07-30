@@ -3,39 +3,36 @@ const cart = [];
 const cartImg = document.getElementsByClassName('carts')
 const containerModal = document.querySelector('#container-cart')
 
-function addToCart(id) {
+function loadProducts(id, price) {
   fetch('../json/fineart.json')
   .then((resp) => resp.json())
   .then((data) => {
-
     const stock = data.find((art) => art.id == id)
 
-    const artId = stock.id
-    const artName = stock.name
-    const artPrice = stock.price
-    const artAmount = stock.amount
-    const artImg = stock.img
+    const containerModal = document.querySelector(`#select-box-${id}`).value
+    const quantity = document.querySelector(`#quantity`).value
 
-  
-    cart.push(stock)
+    if (containerModal == 12) price = (38).toFixed(2)
+    if (containerModal == 28) price = (78).toFixed(2)
+    if (containerModal == 40) price = (123).toFixed(2)
 
-    // if cart.find((art) => art.id === stock.id)
-    // const sumeAmount = cart.find((art) => art.id === stock.id)
+    const copyArt = {id: stock.id, name: stock.name + (" - ") + (containerModal), price: price, amount: quantity}
 
-    // console.log(sumeAmount)
-      
+    cart.push(copyArt)
+
     console.log(cart)
 
     Toastify({
       text: "Added to cart",
       duration: 1500,
+      style: {
+        background: "linear-gradient(to right, #ce2b11, #dd6b58)",
+      }
     }).showToast();
   })
 }
 
-
 // REMOVE ART TO CART
-
 
 function removeToCart(id) {
   console.log('elimi')
